@@ -1,0 +1,5 @@
+name: 'Bento'
+description: 'Find bugs in pull requests with Bento'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
