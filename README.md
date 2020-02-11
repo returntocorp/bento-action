@@ -20,3 +20,13 @@ jobs:
       id: bento
       uses: returntocorp/bento-action@v1
 ```
+
+## Contributing
+
+### Release
+
+The following line will change all action runs to use your current `HEAD`.
+
+``` 
+git tag --force v1 && git push --tags --force-with-lease
+```
