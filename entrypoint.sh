@@ -17,7 +17,7 @@ git reset .
 echo
 echo "== [2/4] …checking what issues the codebase had before your pull request…"
 echo
-bento init > /dev/null
+bento init &> /dev/null
 bento archive --all
 git add .bento*
 
