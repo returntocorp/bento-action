@@ -15,7 +15,8 @@ jobs:
     runs-on: ubuntu-latest
     name: Bento checks
     steps:
+    - uses: actions/checkout@v1
     - name: Bento checks
       id: bento
-      uses: bento/bento-action@v1
+      uses: returntocorp/bento-action@v1
 ```
