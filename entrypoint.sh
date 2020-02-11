@@ -4,7 +4,7 @@ shopt -s nullglob globstar
 
 # go back in time to before the PR
 git revert HEAD --mainline 1 --no-commit
-git restore --staged .
+git reset .
 
 # set up bento on old state
 pipenv run bento init --agree --email "bence+actions@underyx.me"  # FIXME
