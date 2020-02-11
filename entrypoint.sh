@@ -2,6 +2,12 @@
 set -euo pipefail
 shopt -s nullglob globstar
 
+bento_path=$(which bento)
+
+bento() {
+    $bento_path --agree --email "bence+actions@underyx.me" "$@"  # FIXME
+}
+
 echo
 echo "== [1/4] we're going to go back to the commit you based your pull request on…"
 echo
@@ -11,7 +17,7 @@ git reset .
 echo
 echo "== [2/4] …checking what issues the codebase had before your pull request…"
 echo
-bento --agree --email "bence+actions@underyx.me" init  # FIXME
+bento init
 bento archive --all
 git add .bento*
 
