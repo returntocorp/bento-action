@@ -17,7 +17,7 @@ git reset .
 echo
 echo "== [2/4] …checking what issues the codebase had before your pull request…"
 echo
-bento init
+bento init > /dev/null
 bento archive --all
 git add .bento*
 
@@ -25,6 +25,7 @@ echo
 echo "== [3/4] …now let's add your pull request's changes back…"
 echo
 git checkout .
+echo "pull request changes restored via git checkout"
 
 echo
 echo "== [4/4] …and see if there's any new findings!"
