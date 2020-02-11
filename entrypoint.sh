@@ -11,7 +11,7 @@ git reset .
 echo
 echo "== [2/4] …checking what issues the codebase had before your pull request…"
 echo
-bento init --agree --email "bence+actions@underyx.me"  # FIXME
+bento --agree --email "bence+actions@underyx.me" init  # FIXME
 bento archive --all
 git add .bento*
 
