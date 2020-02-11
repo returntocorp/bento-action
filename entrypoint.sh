@@ -5,7 +5,7 @@ shopt -s nullglob globstar
 bento_path=$(which bento)
 
 bento() {
-    $bento_path --agree --email "bence+actions@underyx.me" "$@"  # FIXME
+    $bento_path --agree --email "$INPUT_ACCEPTTERMSWITHEMAIL" "$@"
 }
 
 echo

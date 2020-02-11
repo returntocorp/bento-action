@@ -7,6 +7,8 @@ to find bugs in open pull requests.
 
 ## Usage
 
+To check all pull requests, add the following file at `.github/workflows/bento.yml`:
+
 ```yaml
 on: [pull_request]
 
@@ -19,7 +21,14 @@ jobs:
     - name: Bento checks
       id: bento
       uses: returntocorp/bento-action@v1
+      with:
+        acceptTermsWithEmail: <add your email here>
 ```
+
+To use Bento, you must accept [our Terms of Service & Privacy Policy](https://bento.dev/privacy)
+by specifying your email address.
+This email will be used to provide support and share product updates
+— you can unsubscribe at any time.
 
 ## Contributing
 
@@ -28,5 +37,5 @@ jobs:
 The following line will change all action runs to use your current `HEAD`.
 
 ``` 
-git tag --force v1 && git push --tags --force-with-lease
+git tag --force v1 && git push --tags --force
 ```
