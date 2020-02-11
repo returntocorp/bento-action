@@ -2,17 +2,25 @@
 set -euo pipefail
 shopt -s nullglob globstar
 
-# go back in time to before the PR
+echo
+echo "== [1/4] we're going to go back to the commit you based your pull request on…"
+echo
 git revert HEAD --mainline 1 --no-commit
 git reset .
 
-# set up bento on old state
+echo
+echo "== [2/4] …checking what issues the codebase had before your pull request…"
+echo
 bento init --agree --email "bence+actions@underyx.me"  # FIXME
 bento archive --all
 git add .bento*
 
-# go back to new state
+echo
+echo "== [3/4] …now let's add your pull request's changes back…"
+echo
 git checkout .
 
-# run bento checks
+echo
+echo "== [4/4] …and see if there's any new findings!"
+echo
 bento check --all
