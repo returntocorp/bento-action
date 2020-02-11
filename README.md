@@ -10,8 +10,8 @@ to find bugs in open pull requests.
 To check all pull requests, add the following file at `.github/workflows/bento.yml`:
 
 ```yaml
+name: Bento
 on: [pull_request]
-
 jobs:
   bento:
     runs-on: ubuntu-latest

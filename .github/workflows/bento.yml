@@ -1,3 +1,5 @@
+name: Bento
+
 on: [pull_request]
 
 jobs:
