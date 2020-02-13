@@ -12,3 +12,6 @@ inputs:
       This email will be used to provide support and share product updates
       — you can unsubscribe at any time.
     required: true
+branding:
+  icon: 'purple'  
+  color: 'green'
