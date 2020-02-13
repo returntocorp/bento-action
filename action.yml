@@ -13,5 +13,5 @@ inputs:
       — you can unsubscribe at any time.
     required: true
 branding:
-  icon: 'purple'  
-  color: 'green'
+  icon: 'square'
+  color: 'purple'
