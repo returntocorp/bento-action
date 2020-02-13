@@ -8,6 +8,8 @@ bento() {
     $bento_path --agree --email "$INPUT_ACCEPTTERMSWITHEMAIL" "$@"
 }
 
+echo "action's environment: $(bento --version), $(python --version), $(docker --version)"
+
 echo
 echo "== [1/4] we're going to go back to the commit you based your pull request on…"
 echo
