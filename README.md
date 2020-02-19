@@ -2,23 +2,25 @@
 
 [![r2c community slack](https://img.shields.io/badge/r2c_slack-join-brightgreen?style=for-the-badge&logo=slack&labelColor=4A154B)](https://join.slack.com/t/r2c-community/shared_invite/enQtNjU0NDYzMjAwODY4LWE3NTg1MGNhYTAwMzk5ZGRhMjQ2MzVhNGJiZjI1ZWQ0NjQ2YWI4ZGY3OGViMGJjNzA4ODQ3MjEzOWExNjZlNTA)
 
-An easy way to run [Bento](https://github.com/returntocorp/bento) on your GitHub projects
-to find bugs in open pull requests.
+This GitHub Action reviews pull requests with [Bento](https://github.com/returntocorp/bento)
+whenever a new commit is added to them.
+It reports as failed if there's any new bugs that first appeared in that pull request.
 
 ## Usage
 
-To check all pull requests, add the following file at `.github/workflows/bento.yml`:
+To start checking all pull requests,
+add the following file at `.github/workflows/bento.yml`:
 
 ```yaml
-name: Bento
+name: bento
 on: [pull_request]
 jobs:
   bento:
     runs-on: ubuntu-latest
-    name: Bento checks
+    name: check
     steps:
     - uses: actions/checkout@v1
-    - name: Bento checks
+    - name: bento check
       id: bento
       uses: returntocorp/bento-action@v1
       with:
@@ -32,10 +34,4 @@ This email will be used to provide support and share product updates
 
 ## Contributing
 
-### Release
-
-The following line will change all action runs to use your current `HEAD`.
-
-``` 
-git tag --force v1 && git push --tags --force
-```
+See [CONTRIBUTING.md](CONTRIBUTING.md)
