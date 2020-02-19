@@ -4,7 +4,7 @@ WORKDIR /app
 COPY Pipfile* ./
 
 ENV build_deps="build-essential apt-transport-https ca-certificates curl gnupg2 software-properties-common" \
-    run_deps="docker-ce-cli git"
+    run_deps="docker-ce-cli git nodejs"
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 RUN apt-get update &&\
