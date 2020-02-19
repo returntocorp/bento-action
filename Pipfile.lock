@@ -39,11 +39,11 @@
         },
         "bento-cli": {
             "hashes": [
-                "sha256:0ed8a44f53db085cceec8445d228ca85fb8018b198768267a61a298ae2e1c406",
-                "sha256:d816b84536c00c7b6c8970dbe4357b5df8179de2f6bc66576f3cc1dfbab2ab14"
+                "sha256:cff4769fa92ccd8f8f8dd847ceff5f7112c1f54899d4b56e741347d30dda58c2",
+                "sha256:e74e8687e21dc1f886f071ed66c38cc634f219a97efd87c832a056d842e68b4e"
             ],
             "index": "pypi",
-            "version": "==0.8.2"
+            "version": "==0.9.1"
         },
         "certifi": {
             "hashes": [
@@ -54,10 +54,10 @@
         },
         "cfgv": {
             "hashes": [
-                "sha256:edb387943b665bf9c434f717bf630fa78aecd53d5900d2e05da6ad6048553144",
-                "sha256:fbd93c9ab0a523bf7daec408f3be2ed99a980e20b2d19b50fc184ca6b820d289"
+                "sha256:04b093b14ddf9fd4d17c53ebfd55582d27b76ed30050193c14e560770c5360eb",
+                "sha256:f22b426ed59cd2ab2b54ff96608d846c33dfb8766a67f0b4a6ce130ce244414f"
             ],
-            "version": "==2.0.1"
+            "version": "==3.0.0"
         },
         "chardet": {
             "hashes": [
@@ -72,6 +72,12 @@
                 "sha256:5b94b49521f6456670fdb30cd82a4eca9412788a93fa6dd6df72c94d5a8ff2d7"
             ],
             "version": "==7.0"
+        },
+        "distlib": {
+            "hashes": [
+                "sha256:2e166e231a26b36d6dfe35a48c4464346620f8645ed0ace01ee31822b288de21"
+            ],
+            "version": "==0.3.0"
         },
         "docker": {
             "hashes": [
@@ -109,10 +115,10 @@
         },
         "gitpython": {
             "hashes": [
-                "sha256:17815b908454e49604e86ffb0e4d981c463d009b54ab30ead7f6ad8ad3a8cffb",
-                "sha256:392f31eaadc19db35a54e3ab7285577fb4a86d96ecee08cf22a573f06633baab"
+                "sha256:23b4de99c5fc1564701301cead04e16aa3e47019034668327206d1b52e1e54f7",
+                "sha256:838c38d882a97b2fd146dbd4eb9baaf857cb65ebaa64e4c06fca48aaa491e1c6"
             ],
-            "version": "==2.1.14"
+            "version": "==2.1.15"
         },
         "identify": {
             "hashes": [
@@ -304,10 +310,10 @@
         },
         "virtualenv": {
             "hashes": [
-                "sha256:65ac7fc1513b1d39de71cc12b7ee1d80b44fc5d9279fa9073dee4d0b037e63a4",
-                "sha256:c018fa2e8a19d88bd1742a4f7bb6db5c9b8dfd65a43c03115554ba9f0771c1ec"
+                "sha256:08f3623597ce73b85d6854fb26608a6f39ee9d055c81178dc6583803797f8994",
+                "sha256:de2cbdd5926c48d7b84e0300dea9e8f276f61d186e8e49223d71d91250fbaebd"
             ],
-            "version": "==20.0.0"
+            "version": "==20.0.4"
         },
         "websocket-client": {
             "hashes": [
@@ -318,10 +324,10 @@
         },
         "zipp": {
             "hashes": [
-                "sha256:5c56e330306215cd3553342cfafc73dda2c60792384117893f3a83f8a1209f50",
-                "sha256:d65287feb793213ffe11c0f31b81602be31448f38aeb8ffc2eb286c4f6f6657e"
+                "sha256:12248a63bbdf7548f89cb4c7cda4681e537031eda29c02ea29674bc6854460c2",
+                "sha256:7c0f8e91abc0dc07a5068f315c52cb30c66bfbc581e5b50704c8a2f6ebae794a"
             ],
-            "version": "==2.2.0"
+            "version": "==3.0.0"
         }
     },
     "develop": {}
