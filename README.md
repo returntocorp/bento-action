@@ -4,7 +4,8 @@
 
 This GitHub Action reviews pull requests with [Bento](https://github.com/returntocorp/bento)
 whenever a new commit is added to them.
-It reports as failed if there's any new bugs that first appeared in that pull request.
+It reports as failed if there are any new bugs
+that first appeared in that pull request.
 
 ## Usage
 
@@ -12,15 +13,15 @@ To start checking all pull requests,
 add the following file at `.github/workflows/bento.yml`:
 
 ```yaml
-name: bento
+name: Bento
 on: [pull_request]
 jobs:
   bento:
     runs-on: ubuntu-latest
-    name: check
+    name: Check
     steps:
     - uses: actions/checkout@v1
-    - name: bento check
+    - name: Bento
       id: bento
       uses: returntocorp/bento-action@v1
       with:
