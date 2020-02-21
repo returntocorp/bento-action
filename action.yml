@@ -1,6 +1,6 @@
 name: 'Bento Check'
 author: 'Return To Corporation'
-description: 'Find bugs in pull requests with Bento'
+description: 'Bento finds bugs in pull requests, never nits your style, and needs zero config. It’s free and never sends your code anywhere.'
 runs:
   using: 'docker'
   image: 'Dockerfile'
