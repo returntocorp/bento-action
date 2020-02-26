@@ -16,7 +16,7 @@ RUN apt-get update &&\
     pip install pipenv==2018.11.26 &&\
     pipenv install --system &&\
     apt-get purge $build_deps -y &&\
-    apt-get autoremove &&\
+    apt-get autoremove -y &&\
     rm -rf /var/lib/apt/lists/* &&\
     rm -rf /tmp/*
 
