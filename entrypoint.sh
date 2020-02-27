@@ -21,7 +21,7 @@ echo "== [2/4] …checking for issues present in the codebase before your pull r
 echo
 bento init &> /dev/null
 bento archive --all
-git add .bento*
+git add -f .bento*
 
 echo
 echo "== [3/4] …now adding your pull request's changes back…"
