@@ -23,3 +23,6 @@ RUN apt-get update &&\
 COPY entrypoint.sh ./
 
 ENTRYPOINT ["/app/entrypoint.sh"]
+
+ENV BENTO_ACTION=true\
+    BENTO_ACTION_VERSION=v1
