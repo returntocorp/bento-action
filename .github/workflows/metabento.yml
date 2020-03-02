@@ -1,0 +1,13 @@
+name: metabento
+on: [push]
+jobs:
+  bento:
+    runs-on: ubuntu-latest
+    name: check
+    steps:
+    - uses: actions/checkout@v1
+    - name: running HEAD's version of bento-action
+      id: bento
+      uses: ./
+      with:
+        acceptTermsWithEmail: test@returntocorp.com
