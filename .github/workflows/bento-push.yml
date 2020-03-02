@@ -1,5 +1,5 @@
 name: bento
-on: [pull_request]
+on: [push]
 jobs:
   bento:
     runs-on: ubuntu-latest
