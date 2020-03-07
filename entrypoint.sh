@@ -5,7 +5,21 @@ shopt -s nullglob globstar
 bento_path=$(which bento)
 
 bento() {
-  $bento_path --agree --email "${INPUT_ACCEPTTERMSWITHEMAIL}" "$@"
+  bento_result=0
+  $bento_path --agree --email "${INPUT_ACCEPTTERMSWITHEMAIL}" "$@" || bento_result=$?
+
+  # 0 means success, 2 means issues found or incorrect invocation
+  if [[ $bento_result -ne 0 ]] && [[ $bento_result -ne 2 ]]
+  then
+    cat ~/.bento/last.log
+    echo
+    echo "== [ERROR] \`bento $*\` failed with exit code ${bento_result}"
+    echo
+    echo "This is an internal error, please file an issue at https://github.com/returntocorp/bento/issues/new/choose"
+    echo "and include the log output from above."
+
+    exit $bento_result
+  fi
 }
 
 handle_pull_request() {
@@ -73,7 +87,7 @@ check_prerequisites() {
 }
 
 main() {
-  echo "== action's environment: $(bento --version), $(python --version), $(docker --version)"
+  echo "== action's environment: $($bento_path --version), $(python --version), $(docker --version)"
   echo "== triggered by a ${GITHUB_EVENT_NAME}"
 
   check_prerequisites
