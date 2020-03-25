@@ -88,10 +88,10 @@ check_prerequisites() {
 
 main() {
   echo "== action's environment: $($bento_path --version), $(python --version), $(docker --version)"
-  echo "== triggered by a ${GITHUB_EVENT_NAME}"
 
   check_prerequisites
-  
+  echo "== triggered by a ${GITHUB_EVENT_NAME}"
+
   case ${GITHUB_EVENT_NAME} in
     pull_request)
       handle_pull_request
