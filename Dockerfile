@@ -25,4 +25,5 @@ COPY entrypoint.sh ./
 ENTRYPOINT ["/app/entrypoint.sh"]
 
 ENV BENTO_ACTION=true\
-    BENTO_ACTION_VERSION=v1
+    BENTO_ACTION_VERSION=v1\
+    R2C_USE_REMOTE_DOCKER=1
