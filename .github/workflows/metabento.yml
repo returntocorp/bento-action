@@ -11,3 +11,4 @@ jobs:
       uses: ./
       with:
         acceptTermsWithEmail: test@returntocorp.com
+        slackWebhookURL: ${{ secrets.SLACK_WEBHOOK_URL }}

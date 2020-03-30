@@ -12,6 +12,9 @@ inputs:
       This email will be used to provide support and share product updates
       — you can unsubscribe at any time.
     required: true
+  slackWebhookURL:
+    description: |
+      A Slack incoming webhook URL that you want findings posted to.
 branding:
   icon: 'square'
   color: 'purple'
