@@ -8,6 +8,11 @@ bento() {
   bento_result=0
   $bento_path --agree --email "${INPUT_ACCEPTTERMSWITHEMAIL}" "$@" || bento_result=$?
 
+  if [[ "$1" == "check" ]]
+  then
+    ./bento-monitor "$bento_result" --slack-url "${INPUT_SLACKWEBHOOKURL}" || true
+  fi
+
   # 0 means success, 2 means issues found or incorrect invocation
   if [[ $bento_result -ne 0 ]] && [[ $bento_result -ne 2 ]]
   then
@@ -17,9 +22,10 @@ bento() {
     echo
     echo "This is an internal error, please file an issue at https://github.com/returntocorp/bento/issues/new/choose"
     echo "and include the log output from above."
-
     exit $bento_result
   fi
+
+  return $bento_result
 }
 
 handle_pull_request() {
