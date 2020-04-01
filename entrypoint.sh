@@ -13,8 +13,9 @@ bento() {
     ./bento-monitor "$bento_result" --slack-url "${INPUT_SLACKWEBHOOKURL}" || true
   fi
 
-  # 0 means success, 2 means issues found or incorrect invocation
-  if [[ $bento_result -ne 0 ]] && [[ $bento_result -ne 2 ]]
+  # https://github.com/returntocorp/bento/tree/cfcd3ef#exit-codes
+  # exit codes other than 0/1/2 indicate a malfunction 
+  if [[ $bento_result -ge 3 ]]
   then
     cat ~/.bento/last.log
     echo
