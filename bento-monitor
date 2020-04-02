@@ -54,6 +54,8 @@ def main():
     if not args.slack_url:
         return  # user never configured this script, not printing anything
 
+    print("== sending notifications if needed")
+
     notify_reason = None
     if args.exitcode == 2:
         notify_reason = "found issues"
