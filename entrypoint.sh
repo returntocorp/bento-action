@@ -10,7 +10,7 @@ bento() {
 
   if [[ "$1" == "check" ]]
   then
-    ./bento-monitor "$bento_result" --slack-url "${INPUT_SLACKWEBHOOKURL}" || true
+    ./bento-monitor "$bento_result" "--slack-url=${INPUT_SLACKWEBHOOKURL-}" || true
   fi
 
   # https://github.com/returntocorp/bento/tree/cfcd3ef#exit-codes
