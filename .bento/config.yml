@@ -14,6 +14,9 @@ tools:
     - DL3027
     - DL4001
     run: true
+  r2c.registry.latest:
+    ignore: []
+    run: true
   shellcheck:
     ignore:
     - SC1004
