@@ -22,6 +22,8 @@ RUN apt-get update &&\
 
 COPY entrypoint.sh ./
 
+WORKDIR /src
+
 ENTRYPOINT ["/app/entrypoint.sh"]
 
 ENV BENTO_ACTION=true\
