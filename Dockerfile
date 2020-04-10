@@ -20,7 +20,7 @@ RUN apt-get update &&\
     rm -rf /var/lib/apt/lists/* &&\
     rm -rf /tmp/*
 
-COPY entrypoint.sh ./
+COPY entrypoint.sh bento-monitor ./
 
 ENTRYPOINT ["/app/entrypoint.sh"]
 

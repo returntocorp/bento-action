@@ -11,7 +11,7 @@ bento() {
   if [[ "$1" == "check" ]]
   then
     echo
-    ./bento-monitor "$bento_result" "--slack-url=${INPUT_SLACKWEBHOOKURL-}" || true
+    /app/bento-monitor "$bento_result" "--slack-url=${INPUT_SLACKWEBHOOKURL-}" || true
     echo
   fi
 
