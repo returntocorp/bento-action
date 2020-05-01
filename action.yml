@@ -3,7 +3,7 @@ author: 'Return To Corporation'
 description: 'Bento finds bugs in pull requests, never nits your style, and needs zero config.'
 runs:
   using: 'docker'
-  image: 'docker://returntocorp/bento-action:v1'
+  image: 'docker://returntocorp/bento-action:latest'
 inputs:
   acceptTermsWithEmail:
     description: |
