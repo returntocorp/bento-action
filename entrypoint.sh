@@ -8,13 +8,6 @@ bento() {
   bento_result=0
   $bento_path --agree --email "${INPUT_ACCEPTTERMSWITHEMAIL}" "$@" || bento_result=$?
 
-  if [[ "$1" == "check" ]]
-  then
-    echo
-    /app/bento-monitor "$bento_result" "--slack-url=${INPUT_SLACKWEBHOOKURL-}" || true
-    echo
-  fi
-
   # https://github.com/returntocorp/bento/tree/cfcd3ef#exit-codes
   # exit codes other than 0/1/2 indicate a malfunction 
   if [[ $bento_result -ge 3 ]]
